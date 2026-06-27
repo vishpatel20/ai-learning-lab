@@ -116,3 +116,41 @@ When processing "it":
 Because "dog" receives the highest attention weight, the model determines that "it" most likely refers to the dog.
 
 Attention weights allow transformers to capture context and relationships between tokens.
+
+## Multi-Head Attention
+
+A transformer does not perform attention only once.
+
+Instead, it performs multiple attention operations in parallel. Each of these operations is called an attention head.
+
+Each attention head can learn different relationships between tokens.
+
+For example, one head may learn:
+
+- Subject → Verb relationships
+
+Another head may learn:
+
+- Pronoun → Object relationships
+
+Another head may learn:
+
+- Long-range dependencies between distant tokens
+
+Because multiple heads examine the same sentence from different perspectives, the transformer gains a richer understanding of the text.
+
+This process is called Multi-Head Attention.
+
+Example:
+
+Sentence:
+
+> Sarah gave John a book because he asked for it.
+
+Different attention heads may learn:
+
+- "he" → John
+- "it" → book
+- "gave" → Sarah
+
+Using multiple attention heads allows transformers to capture many different relationships simultaneously.
