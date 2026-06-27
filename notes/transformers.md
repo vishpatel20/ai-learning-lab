@@ -57,3 +57,30 @@ When processing the token "it", attention may determine:
 - ball → low importance
 
 This allows the model to understand that "it" refers to the dog.
+
+
+## Self-Attention
+
+Self-attention is the mechanism that allows each token in a sequence to examine every other token in the same sequence.
+
+For every token, the model asks:
+
+> Which other tokens in this sentence are important to me?
+
+The model then assigns weights to all other tokens and combines this information to produce a richer understanding of the token.
+
+Example:
+
+Sentence:
+
+> The dog chased the ball.
+
+When processing the token "dog", the model may pay attention to:
+
+- chased
+- ball
+- The
+
+This process helps the model understand context and relationships within the sentence.
+
+Self-attention is one of the core innovations that made transformers successful.
