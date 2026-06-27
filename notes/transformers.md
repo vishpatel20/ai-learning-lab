@@ -84,3 +84,35 @@ When processing the token "dog", the model may pay attention to:
 This process helps the model understand context and relationships within the sentence.
 
 Self-attention is one of the core innovations that made transformers successful.
+
+
+## Attention Weights
+
+Attention does not treat all tokens equally.
+
+For every token being processed, the transformer assigns a numerical importance score (weight) to every other token.
+
+Higher weights mean:
+
+> "This token is important for understanding the current token."
+
+Lower weights mean:
+
+> "This token is less important."
+
+Example:
+
+Sentence:
+
+> The dog chased the ball because it was excited.
+
+When processing "it":
+
+- dog → 0.80
+- ball → 0.10
+- chased → 0.05
+- The → 0.05
+
+Because "dog" receives the highest attention weight, the model determines that "it" most likely refers to the dog.
+
+Attention weights allow transformers to capture context and relationships between tokens.
