@@ -154,3 +154,32 @@ Different attention heads may learn:
 - "gave" → Sarah
 
 Using multiple attention heads allows transformers to capture many different relationships simultaneously.
+
+## Positional Encoding
+
+Transformers process tokens in parallel rather than one at a time.
+
+Because of this, transformers do not inherently understand the order of words.
+
+Positional encoding provides information about the position of each token in a sequence.
+
+This allows the model to distinguish between sentences such as:
+
+> Dog bites man.
+
+and
+
+> Man bites dog.
+
+Although both sentences contain the same tokens, their meanings are very different because of word order.
+
+Positional information is added to token embeddings before they are passed into the transformer.
+
+Without positional encoding, a transformer would treat:
+
+- "dog bites man"
+- "man bites dog"
+
+as nearly identical.
+
+Positional encoding allows transformers to understand sequence order and preserve meaning.
