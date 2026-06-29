@@ -183,3 +183,10 @@ Without positional encoding, a transformer would treat:
 as nearly identical.
 
 Positional encoding allows transformers to understand sequence order and preserve meaning.
+
+### Embeddings vs. Positional Encoding
+
+- Embeddings tell the model **what** a token means.
+- Positional encoding tells the model **where** the token appears in the sequence.
+
+The transformer uses both together to understand language accurately.
