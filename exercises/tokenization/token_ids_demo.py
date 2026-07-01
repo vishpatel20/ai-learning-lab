@@ -3,6 +3,7 @@
 text = "Hello AI hello world AI"
 
 # Step 1: Tokenize
+# converted from raw text to tokens 
 tokens = text.split()
 
 print("Tokens:")
